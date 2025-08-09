@@ -13,13 +13,67 @@
         android:layout_height="wrap_content"
         android:id="@+id/toolbar"
         app:titleTextAppearance="@style/Title"
-        app:title="Bike Vitals"
+        app:title="Bike Metrics"
         app:titleCentered="true"
         app:titleTextColor="#FFF"
         />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/giggle"
+        android:layout_marginTop="10sp"
+        android:layout_below="@+id/toolbar"
         />
+
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="200sp"
+    android:layout_below="@+id/localityTV"
+    android:id="@+id/card"
+    android:layout_marginStart="20sp"
+    android:layout_marginEnd="20sp"
+    android:layout_marginTop="120sp"
+    app:cardElevation="100sp"
+    style="@style/Widget.Material3.CardView.Filled"
+    app:cardBackgroundColor="#041E42"
+    android:layout_centerHorizontal="true"
+
+    >
+
+    <com.github.anastr.speedviewlib.PointerSpeedometer
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        app:sv_speedTextColor="#ffff"
+        app:sv_unitTextColor="#ffff"
+        app:sv_withTremble="false"
+        app:sv_textSize="12sp"
+        app:sv_markWidth="3sp"
+        app:sv_speedometerWidth="14sp"
+        app:sv_speedTextSize="28sp"
+        app:sv_backgroundCircleColor="#041E42"/>
+
+</com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10sp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:gravity="center_horizontal"
+            android:textSize="14sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 
 </RelativeLayout>
